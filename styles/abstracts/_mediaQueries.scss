@@ -1,0 +1,34 @@
+$screenSm: 480px;
+$screenMd: 768px;
+$screenLg: 992px;
+$screenXl: 1200px;
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == sm) {
+    @media (min-width: $screenSm) {
+      @content;
+    }
+  }
+  @if ($breakpoint == md) {
+    @media (min-width: $screenMd) {
+      @content;
+    }
+  }
+  @if ($breakpoint == lg) {
+    @media (min-width: $screenLg) {
+      @content;
+    }
+  }
+  @if ($breakpoint == xl) {
+    @media (min-width: $screenXl) {
+      @content;
+    }
+  }
+}
+
+/* 
+how to use: 
+@include respond(sm) {
+     font-size: 20px;
+   }
+*/
