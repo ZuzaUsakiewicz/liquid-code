@@ -1,0 +1,128 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mediaQueries" as *;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  top: 0;
+
+  .nav-links {
+    @include flexCenter;
+    flex-direction: column;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: $mainLight;
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.86, 0, 0.07, 1);
+    li {
+      padding: 0.5rem 0;
+      position: relative;
+      transform: translate(-50%);
+      @include respond(md) {
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 0.1rem;
+          background: linear-gradient(to right, $mainPink 50%, $mainBlue 50%);
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+    &.active {
+      transform: translateX(0%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(to right, $mainPink 50%, $mainBlue 50%);
+      width: 1rem;
+      height: 10%;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 998;
+    display: block;
+    outline: none;
+    div {
+      width: 1.3rem;
+      height: 0.1rem;
+      background-color: $mainBlue;
+      margin: 5px;
+      transition: transform 0.3s ease-in, opacity 0.2s ease-in;
+    }
+    :nth-child(2) {
+      background-color: $mainPink;
+    }
+    @include respond(md) {
+      &:hover {
+        :nth-child(1) {
+          transform: translateY(-2px);
+        }
+        :nth-child(2) {
+          transform: scaleX(0.7);
+        }
+        :nth-child(3) {
+          transform: translateY(2px);
+        }
+      }
+    }
+    &.toggle {
+      :nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+      }
+      :nth-child(2) {
+        opacity: 0;
+      }
+      :nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+      }
+    }
+  }
+}
+
+@keyframes navLinkAnimation {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
