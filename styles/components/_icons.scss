@@ -1,0 +1,18 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/mediaQueries" as *;
+
+.icons {
+  @include flexCenter;
+  padding-top: 1rem;
+  a {
+    i {
+      padding: 0 0.4rem;
+    }
+    @include respond(md) {
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(0.2rem);
+      }
+    }
+  }
+}
