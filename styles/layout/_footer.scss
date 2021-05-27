@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/mediaQueries" as *;
+
+.footer-container {
+  padding: 1rem;
+  h4 {
+    font-size: 1rem;
+  }
+
+  @include flexCenter;
+  flex-wrap: wrap;
+
+  .footer-card {
+    width: 100%;
+    @include flexCenter;
+    flex-direction: column;
+    min-height: 6rem;
+    a {
+      font-size: 0.9rem;
+    }
+  }
+  .logo {
+    width: 4rem;
+  }
+  & > * {
+    flex: 1 1 10rem;
+  }
+  address {
+    font-size: 0.9rem;
+  }
+  @include respond(md) {
+    h4 {
+      font-size: 1.3rem;
+    }
+    padding: 0.5rem 3rem 1rem 3rem;
+    address {
+      font-size: 0.9rem;
+    }
+  }
+}
