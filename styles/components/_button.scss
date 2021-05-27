@@ -1,0 +1,47 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/mediaQueries";
+
+.btn {
+  color: $mainLight;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    $mainBlue 5%,
+    $mainPink 30%,
+    $mainPink 50%,
+    $mainBlue 75%
+  );
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  will-change: background-position;
+  transition: background-position 0.6s ease-in-out;
+
+  @include mediaQueries.respond(md) {
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+}
+
+.btn-to-top {
+  background-image: linear-gradient(to right, $mainBlue, $mainPink);
+  color: $mainLight;
+  padding: 0.3rem 0.6rem;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  z-index: 998;
+  cursor: pointer;
+  transform: translateY(200%);
+  transition: transform 0.4s ease-in;
+  i {
+    pointer-events: none;
+  }
+  &.active {
+    transform: translate(0);
+  }
+}
