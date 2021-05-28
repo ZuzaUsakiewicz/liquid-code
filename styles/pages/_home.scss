@@ -1,0 +1,207 @@
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+
+section {
+  @include responsive;
+  min-height: 90vh;
+  .about-container {
+    @include responsive;
+    .text {
+      padding: 1rem 0.5rem;
+      @include flexCenter;
+      flex-direction: column;
+      p {
+        margin-bottom: 0.5rem;
+      }
+    }
+    @include respond(md) {
+      .text {
+        max-width: 25rem;
+        align-self: flex-end;
+        p {
+          padding: 2rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+.work-flow {
+  @include flexCenter;
+  padding: 3rem 0.5rem;
+  flex-direction: column;
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-gap: 0.5rem;
+    .card {
+      position: relative;
+      padding: 1rem 0;
+      background: white;
+      border-radius: 5%;
+      @include flexCenter;
+      flex-direction: column;
+      & > * {
+        flex-basis: 100%;
+      }
+      @include boxShadow(rgba(100, 100, 111, 0.2) 0px 7px 29px 0px);
+      &::after {
+        content: attr(data-number);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: rgb(81, 56, 224, 0.1);
+        z-index: 0;
+        font-size: 10rem;
+        transform: translate(-50%, -50%);
+      }
+      .card-image-container {
+        padding: 0.2rem;
+        @include flexCenter;
+        .card-image {
+          width: 8rem;
+          height: auto;
+          z-index: 1;
+        }
+      }
+      .card-text {
+        padding: 0rem 0.5rem 1.5rem 0.5rem;
+        z-index: 1;
+        p {
+          font-size: 0.7rem;
+          padding: 0 0.8rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @include respond(md) {
+    .cards {
+      padding: 3rem 0;
+      .card {
+        padding: 0;
+        .card-text {
+          padding: 1rem 0.2rem 2rem 0.2rem;
+        }
+      }
+    }
+  }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+.testimonials {
+  background: white;
+  .testimonials-container {
+    width: 80%;
+    @include flexCenter;
+    flex-wrap: wrap;
+    .wrapper {
+      max-width: 20rem;
+      padding: 0.5rem;
+      margin: 0.4rem;
+      @include flexCenter;
+      flex-direction: column;
+      @include boxShadow(rgba(100, 100, 111, 0.2) 0px 7px 29px 0px);
+      @include respond(md) {
+        flex-direction: row;
+      }
+      .avatar {
+        width: 6rem;
+        height: 6rem;
+        .avatar-image {
+          object-fit: cover;
+        }
+      }
+      .text-wrapper {
+        display: flex;
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        padding: 0.5rem;
+        p {
+          font-size: 0.7rem;
+        }
+        i {
+          color: $mainPink;
+        }
+        h6 {
+          padding: 0.3rem;
+        }
+        p,
+        h6,
+        i {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+.quote {
+  padding: 1rem;
+  @include flexCenter;
+  flex-direction: column;
+  h4 {
+    padding: 0.5rem;
+  }
+}
+
+.liquid-title {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 900;
+  background: linear-gradient(to right, rgb(81, 56, 224), rgb(209, 45, 168));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 3rem 0 3rem 0;
+  @include respond(md) {
+    margin: 1rem 0 1rem 0;
+  }
+}
+.image {
+  max-width: 25rem;
+  width: 100%;
+  height: auto;
+}
+
+.image-container.hero {
+  position: relative;
+  z-index: 0;
+  animation: floating 3s infinite;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 90vw;
+    max-width: 25rem;
+    max-height: 25rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: rgb(254, 254, 255);
+    background-image: radial-gradient(at top left, #3e169b, transparent),
+      radial-gradient(at top right, #5fcaf5, transparent),
+      radial-gradient(at bottom left, #fd54b7, transparent);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
