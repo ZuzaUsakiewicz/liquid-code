@@ -11,6 +11,16 @@ nav {
   position: fixed;
   z-index: 998;
   top: 0;
+  background: transparent;
+  transition: background 0.3s ease-in-out;
+  &.active {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  @include respond(md) {
+    &.active {
+      background: transparent;
+    }
+  }
 
   .nav-links {
     @include flexCenter;
@@ -31,7 +41,7 @@ nav {
     li {
       padding: 0.5rem 0;
       position: relative;
-      transform: translate(-50%);
+      opacity: 0;
       @include respond(md) {
         &::after {
           content: "";
@@ -119,7 +129,7 @@ nav {
 @keyframes navLinkAnimation {
   from {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(200%);
   }
   to {
     opacity: 1;
