@@ -1,6 +1,8 @@
-import "./style.scss";
-
-document.querySelector("#app").innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+import "./styles/main.scss";
+import "./js/loader";
+import "./js/menu";
+import "./js/scrollToTop";
+import "./js/slider";
+import "./js/animations";
+import "./js/navbackground";
+import "./js/pageTransition";
