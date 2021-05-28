@@ -1,0 +1,63 @@
+@use "../abstracts/mediaQueries" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  @include respond(md) {
+    width: 80%;
+  }
+}
+
+.swiper-slide {
+  padding: 2rem;
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  .slider-text-container {
+    @include flexBetween;
+    h3 {
+      padding: 0.5rem 0;
+    }
+    p {
+      display: none;
+    }
+    @include respond(md) {
+      p {
+        display: block;
+        padding: 0.5rem 0.4rem;
+      }
+    }
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  i {
+    color: $mainDark;
+    font-size: 0.9rem;
+  }
+  @include respond(md) {
+    i {
+      font-size: 2rem;
+    }
+  }
+}
+.swiper-slide img {
+  display: block;
+  width: 40%;
+  height: 40%;
+  object-fit: cover;
+}
