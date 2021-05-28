@@ -9,5 +9,9 @@
   "devDependencies": {
     "sass": "^1.34.0",
     "vite": "^2.3.3"
+  },
+  "dependencies": {
+    "swiper": "^6.6.2",
+    "swup": "^2.0.14"
   }
 }
