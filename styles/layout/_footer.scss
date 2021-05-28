@@ -19,8 +19,8 @@
       font-size: 0.9rem;
     }
   }
-  .logo {
-    width: 4rem;
+  .logo-text {
+    z-index: 2;
   }
   & > * {
     flex: 1 1 10rem;
