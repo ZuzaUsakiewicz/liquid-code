@@ -28,7 +28,8 @@ $screenXl: 1200px;
 
 /* 
 how to use: 
-@include respond(sm) {
+@use "../abstracts/_mediaQueries";
+@include mediaQueries.respond(sm) {
      font-size: 20px;
    }
 */
