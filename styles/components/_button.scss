@@ -8,6 +8,7 @@
   font-weight: 700;
   padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
+  cursor: pointer;
   background-image: linear-gradient(
     to bottom,
     $mainBlue 5%,
@@ -32,12 +33,14 @@
   color: $mainLight;
   padding: 0.3rem 0.6rem;
   position: fixed;
-  bottom: 5%;
-  right: 5%;
-  z-index: 998;
+  border-radius: 20%;
+  bottom: 2%;
+  right: 4%;
+  z-index: 996;
   cursor: pointer;
   transform: translateY(200%);
   transition: transform 0.4s ease-in;
+
   i {
     pointer-events: none;
   }
