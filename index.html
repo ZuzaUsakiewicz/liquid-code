@@ -3,17 +3,318 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liquid Code - we make the smoothest code for you!</title>
   </head>
-  <body>
+  <body id="swup" class="transition-fade">
     <div class="loader">
       <div class="lds-ripple">
         <div></div>
         <div></div>
       </div>
     </div>
+    <nav class="nav">
+      <a href="index.html">
+        <div class="logo-text">
+          <p class="initials">LC</p>
+        </div></a
+      >
+      <ul class="nav-links">
+        <li><a class="link" href="index.html">home</a></li>
+        <li><a class="link" href="about.html">about</a></li>
+        <li><a class="link" href="works.html">works</a></li>
+        <li><a class="link" href="blog.html">blog</a></li>
+        <li><a class="link" href="contact.html">contact</a></li>
 
+        <div class="icons">
+          <a href="index.html"><i class="far fa-angry"></i></a>
+          <a href="index.html"><i class="fab fa-codepen"></i></a>
+          <a href="index.html"><i class="fab fa-discord"></i></a>
+          <a href="index.html"><i class="fab fa-dribbble"></i></a>
+        </div>
+      </ul>
+      <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+    </nav>
+    <section class="header animation">
+      <div class="image-container hero">
+        <img
+          src="/images/virtual.png"
+          alt="virtual reality illustration"
+          class="image"
+        />
+      </div>
+      <div class="title hero">
+        <h1>
+          <span class="liquid-title">liquid code</span> providing future into
+          your apps.
+        </h1>
+        <a href="contact.html" class="btn">hire us!</a>
+      </div>
+    </section>
+    <section class="about animation">
+      <div class="about-container">
+        <div class="image-container">
+          <img
+            src="/images/table.png"
+            alt="virtual reality illustration"
+            class="image"
+          />
+        </div>
+        <div class="text">
+          <h2 class="liquid-title">who we are</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+            eligendi. Vitae necessitatibus pariatur recusandae perspiciatis
+            tenetur, numquam exercitationem, repudiandae modi minima, suscipit
+            ea ducimus veritatis molestias ipsa odit earum inventore est. Sit
+            quo repellat architecto inventore. Neque eum quam necessitatibus?
+          </p>
+          <a href="about.html" class="btn secondary">read more</a>
+        </div>
+      </div>
+    </section>
+    <section class="work-flow animation">
+      <h2 class="liquid-title">how do we work</h2>
+      <div class="cards">
+        <div class="card" data-number="1">
+          <div class="card-image-container">
+            <img src="/images/card1.png" alt="" class="card-image" />
+          </div>
+          <div class="card-text">
+            <h3>connection</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusantium nobis eos excepturi odio animi.
+            </p>
+          </div>
+        </div>
+        <div class="card" data-number="2">
+          <div class="card-image-container">
+            <img src="/images/card2.png" alt="" class="card-image" />
+          </div>
+          <div class="card-text">
+            <h3>code</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusantium nobis eos excepturi odio animi.
+            </p>
+          </div>
+        </div>
+        <div class="card" data-number="3">
+          <div class="card-image-container">
+            <img src="/images/card3.png" alt="" class="card-image" />
+          </div>
+          <div class="card-text">
+            <h3>final product</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Accusantium nobis eos excepturi odio animi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects animation">
+      <h2 class="liquid-title">our projects</h2>
+      <div class="swiper-container projectsSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project name</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn secondary">more</a>
+            </div>
+
+            <img src="/images/project1.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project name</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn">more</a>
+            </div>
+            <img src="/images/project2.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project name</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn secondary">more</a>
+            </div>
+            <img src="/images/project3.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project name</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn">more</a>
+            </div>
+            <img src="/images/project4.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project name</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn">more</a>
+            </div>
+            <img src="/images/project5.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <div class="slider-text-container">
+              <h3>project</h3>
+              <p>
+                description Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Sequi, fuga.
+              </p>
+              <a href="index.html" class="btn secondary">more</a>
+            </div>
+            <img src="/images/project6.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+    <section class="testimonials animation">
+      <h2 class="liquid-title">our clients about us</h2>
+      <div class="testimonials-container">
+        <div class="wrapper">
+          <div class="avatar">
+            <img src="/images/bighead1.svg" alt="" class="avatar-image" />
+          </div>
+          <div class="text-wrapper">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              fuga.
+            </p>
+            <h6>John Doe</h6>
+            <i class="fas fa-quote-right"></i>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="avatar">
+            <img src="/images/bighead.svg" alt="" class="avatar-image" />
+          </div>
+          <div class="text-wrapper">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, fuga.Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Iure, fuga.
+            </p>
+            <h6>Jane Yo</h6>
+            <i class="fas fa-quote-right"></i>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="avatar">
+            <img src="/images/bighead2.svg" alt="" class="avatar-image" />
+          </div>
+          <div class="text-wrapper">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, fuga.
+            </p>
+            <h6>Jade Nodoeode</h6>
+            <i class="fas fa-quote-right"></i>
+          </div>
+        </div>
+        <div class="wrapper">
+          <div class="avatar">
+            <img src="/images/bighead3.svg" alt="" class="avatar-image" />
+          </div>
+          <div class="text-wrapper">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+              fuga.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Iure, fuga.
+            </p>
+            <h6>Dana Youdoenode</h6>
+            <i class="fas fa-quote-right"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="quote animation">
+      <h4>so it means that...</h4>
+      <div class="image-container">
+        <img
+          src="/images/without.png"
+          alt="virtual reality illustration"
+          class="image"
+        />
+      </div>
+      <h4>
+        you will not be stripped by
+        <span class="liquid-title">liquid code</span>
+      </h4>
+    </div>
+    <button class="btn-to-top"><i class="fas fa-arrow-up"></i></button>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-card">
+          <div class="icons">
+            <a href="index.html"><i class="far fa-angry"></i></a>
+            <a href="index.html"><i class="fab fa-codepen"></i></a>
+            <a href="index.html"><i class="fab fa-discord"></i></a>
+            <a href="index.html"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+        <div class="footer-card address">
+          <h4>Address</h4>
+          <p>ul. Nowa 16/3</p>
+          <p>15-500</p>
+          <p>Białystok</p>
+        </div>
+
+        <div class="footer-card contact">
+          <h4>Contact</h4>
+          <p>tel.: 500 500 500</p>
+          <p>fax: 100 100</p>
+          <a href="mailto:liquid-code@example.com">lc@example.com</a>
+        </div>
+        <div class="footer-card">
+          <div class="logo-text">
+            <p class="initials">LC</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
