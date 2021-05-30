@@ -1,0 +1,74 @@
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin boxShadow($property) {
+  -webkit-box-shadow: $property;
+  -moz-box-shadow: $property;
+  box-shadow: $property;
+}
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+  transition: $property;
+}
+@mixin linear-gradient($angle, $gradient1, $gradient2) {
+  background-color: $gradient2; /* Fallback Color */
+  background-image: -webkit-gradient(
+    linear,
+    $angle,
+    from($gradient1),
+    to($gradient2)
+  ); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(
+    $angle,
+    $gradient1,
+    $gradient2
+  ); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image: -moz-linear-gradient(
+    $angle,
+    $gradient1,
+    $gradient2
+  ); /* FF3.6 */
+  background-image: -ms-linear-gradient(
+    $angle,
+    $gradient1,
+    $gradient2
+  ); /* IE10 */
+  background-image: -o-linear-gradient(
+    $angle,
+    $gradient1,
+    $gradient2
+  ); /* Opera 11.10+ */
+  background-image: linear-gradient($angle, $gradient1, $gradient2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=$angle,StartColorStr='#{$gradient1}', EndColorStr='#{$gradient2}');
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+}
+@mixin flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin responsive {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+// .box { @include transform(rotate(30deg)); }
