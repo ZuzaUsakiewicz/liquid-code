@@ -38,13 +38,16 @@
     @include respond(md) {
       p {
         display: block;
-        padding: 0.5rem 0.4rem;
+        padding: 0.5rem;
       }
     }
   }
 }
 .swiper-button-next,
 .swiper-button-prev {
+  &::after {
+    display: none;
+  }
   i {
     color: $mainDark;
     font-size: 0.9rem;
@@ -57,7 +60,7 @@
 }
 .swiper-slide img {
   display: block;
-  width: 40%;
-  height: 40%;
-  object-fit: cover;
+  width: 35%;
+  height: 100%;
+  object-fit: contain;
 }
