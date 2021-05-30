@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as *;
-@use "../abstracts/mediaQueries";
+@use "../abstracts/mixins" as *;
+@use "../abstracts/mediaQueries" as *;
 
 .btn {
   color: $mainLight;
@@ -9,27 +10,25 @@
   padding: 0.5rem 1.2rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  background-image: linear-gradient(
-    to bottom,
-    $mainBlue 5%,
-    $mainPink 30%,
-    $mainPink 50%,
-    $mainBlue 75%
-  );
+  @include linear-gradient(to bottom, $mainBlue, $mainPink);
   background-size: 100% 200%;
   background-position: 0% 100%;
   will-change: background-position;
   transition: background-position 0.6s ease-in-out;
 
-  @include mediaQueries.respond(md) {
+  @include respond(md) {
     &:hover {
       background-position: 0 0;
     }
   }
+  &.secondary {
+    @include linear-gradient(to bottom, $mainPink, $mainBlue);
+  }
 }
 
 .btn-to-top {
-  background-image: linear-gradient(to right, $mainBlue, $mainPink);
+  // background-image: linear-gradient(to right, $mainBlue, $mainPink);
+  @include linear-gradient(to right, $mainBlue, $mainPink);
   color: $mainLight;
   padding: 0.3rem 0.6rem;
   position: fixed;
