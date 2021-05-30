@@ -1,10 +1,11 @@
 @use "../abstracts/colors" as *;
+@use "../abstracts/mixins" as *;
 
 .logo-text {
   z-index: 998;
   position: relative;
   color: white;
-  background: linear-gradient(120deg, $mainPink 0%, $mainBlue 100%);
+  @include linear-gradient(120deg, $mainPink 0%, $mainBlue 100%);
   border-radius: 20%;
   width: 2.2rem;
   height: 2.2rem;
