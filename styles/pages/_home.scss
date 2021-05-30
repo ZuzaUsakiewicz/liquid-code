@@ -4,24 +4,24 @@
 
 section {
   @include responsive;
-  min-height: 90vh;
-  .about-container {
-    @include responsive;
-    .text {
-      padding: 1rem 0.5rem;
-      @include flexCenter;
-      flex-direction: column;
-      p {
-        margin-bottom: 0.5rem;
-      }
+  min-height: 85vh;
+}
+.about-container {
+  @include responsive;
+  .text {
+    padding: 0.5rem;
+    @include flexCenter;
+    flex-direction: column;
+    p {
+      margin-bottom: 0.8rem;
     }
-    @include respond(md) {
-      .text {
-        max-width: 25rem;
-        align-self: flex-end;
-        p {
-          padding: 2rem 1rem;
-        }
+  }
+  @include respond(md) {
+    .text {
+      max-width: 25rem;
+      align-self: flex-end;
+      p {
+        padding: 2rem 1rem;
       }
     }
   }
@@ -29,12 +29,12 @@ section {
 
 .work-flow {
   @include flexCenter;
-  padding: 3rem 0.5rem;
+  padding: 2rem 0.5rem 1rem 0.5rem;
   flex-direction: column;
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     .card {
       position: relative;
       padding: 1rem 0;
