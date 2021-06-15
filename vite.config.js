@@ -5,10 +5,10 @@ module.exports = {
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "pages/about.html"),
-        contact: resolve(__dirname, "pages/contact.html"),
-        works: resolve(__dirname, "pages/works.html"),
-        blog: resolve(__dirname, "pages/blog.html"),
+        about: resolve(__dirname, "about.html"),
+        contact: resolve(__dirname, "contact.html"),
+        works: resolve(__dirname, "works.html"),
+        blog: resolve(__dirname, "blog.html"),
       },
     },
   },
