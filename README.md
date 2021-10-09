@@ -7,6 +7,7 @@
 
 ## General info
 This project is simple landing page for fictional IT startup.
+https://liquid-code.netlify.app/
 <br> It's under :construction:
 	
 ## Technologies
